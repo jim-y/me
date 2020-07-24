@@ -1,0 +1,11 @@
+.mainText {
+  font: bold 36px/1.4 "Open Sans", arial, sans-serif;
+  letter-spacing: 0.15em;
+  line-height: 80%;
+  text-transform: lowercase;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+}
