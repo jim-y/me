@@ -1,35 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/layouts/main";
-import styles from "./index.module.css";
-
-const heroContainer = {
-  position: "relative",
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "center",
-};
-
-const left = {
-  position: "relative",
-  width: "370px",
-  backgroundColor: "darkslateblue",
-  borderRight: "2px solid white",
-};
-
-const middle = {
-  position: "absolute",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: "20px",
-  color: "darkslateblue",
-  bottom: "70px",
-  left: "80px",
-  height: "350px",
-  width: "350px",
-  backgroundColor: "white",
-};
+import styles from "./index.module.scss";
 
 export default function Home() {
   return (
@@ -40,21 +11,23 @@ export default function Home() {
       </Head>
       <Layout>
         <div>
-          <div style={heroContainer}>
-            <div style={left}>
-              <aside style={middle}>
+          <div className={styles.heroContainer}>
+            <div className={styles.canvas}>
+              <aside className={styles.intro}>
                 <div className={styles.aboutContainer}>
-                  <h2 className={styles.mainText}>Attila Kling</h2>
+                  <h2>Attila Kling</h2>
                   <span>senior software engineer</span>
                   <span>team leader</span>
-                  <span>@abbyy</span>
+                  <a href="https://www.abbyy.com/" className={styles.company}>
+                    @abbyy
+                  </a>
                 </div>
               </aside>
             </div>
             <img
               src="/assets/images/screen-post-Ya3r7oApP4g-unsplash.jpg"
               alt="hero image"
-              style={{ width: "500px" }}
+              className={styles.vis}
             />
           </div>
         </div>
