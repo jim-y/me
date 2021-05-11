@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint --quiet --ext js --ext jsx ."
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",
@@ -18,12 +19,18 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "framer-motion": "^4",
+    "markdown-link-extractor": "^1.2.7",
     "next": "10.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-markdown": "^6.0.2",
+    "react-syntax-highlighter": "^15.4.3",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-plugin-react": "^7.23.2",
     "prettier": "2.2.1"
   }
 }
