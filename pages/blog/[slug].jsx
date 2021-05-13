@@ -10,9 +10,10 @@ import Footer from '../../src/components/post/Footer';
 import { MasterHeading } from '../../src/components/Headings';
 import { useRouter } from 'next/router';
 import Spinner from '../../src/components/Spinner';
+import path from 'path';
 
 export async function getStaticPaths() {
-  const res = await fetch(`${process.env.STRAPI_URL}/posts`);
+  const res = await fetch(path.join(process.env.STRAPI_URL, '/posts'));
   const posts = await res.json();
 
   const paths = posts.map((post) => ({
@@ -29,7 +30,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const query = qs.stringify({ slug: params.slug, _limit: 1 });
-  const res = await fetch(`${process.env.STRAPI_URL}/posts?${query}`);
+  const res = await fetch(path.join(process.env.STRAPI_URL, `/posts?${query}`));
   const [post] = await res.json();
   const links = markdownLinkExtractor(post.content);
   return {
