@@ -45,6 +45,7 @@
   "globals": {
     "fetch": "readonly",
     "console": "readonly",
-    "Intl": "readonly"
+    "Intl": "readonly",
+    "process": "readonly"
   }
 }
