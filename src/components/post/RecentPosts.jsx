@@ -71,12 +71,7 @@ const RecentPost = ({ post, ...props }) => {
       onMouseLeave={setHasShadow.off}
     >
       <Box position="relative" minW="150px" mr={4}>
-        <Image
-          src={`process.env.STRAPI_URL${thumbnail.url}`}
-          layout="fill"
-          objectFit="cover"
-          alt={post.banner.alternativeText}
-        />
+        <Image src={thumbnail.url} layout="fill" objectFit="cover" alt={post.banner.alternativeText} />
       </Box>
 
       <Box>
