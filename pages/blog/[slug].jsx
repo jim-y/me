@@ -14,7 +14,10 @@ import path from 'path';
 
 export async function getStaticPaths() {
   const url = path.join(process.env.STRAPI_URL, '/posts');
-  console.log({ url });
+  console.log({
+    url,
+    strapi: process.env.STRAPI_URL
+  });
   const res = await fetch(url);
   const posts = await res.json();
   console.log(JSON.stringify(posts, null, 2));
