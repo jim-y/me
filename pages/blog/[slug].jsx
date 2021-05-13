@@ -13,9 +13,11 @@ import Spinner from '../../src/components/Spinner';
 import path from 'path';
 
 export async function getStaticPaths() {
-  const res = await fetch(path.join(process.env.STRAPI_URL, '/posts'));
+  const url = path.join(process.env.STRAPI_URL, '/posts');
+  console.log({ url });
+  const res = await fetch(url);
   const posts = await res.json();
-
+  console.log(JSON.stringify(posts, null, 2));
   const paths = posts.map((post) => ({
     params: {
       slug: post.slug
