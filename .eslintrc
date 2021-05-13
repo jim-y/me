@@ -46,6 +46,7 @@
     "fetch": "readonly",
     "console": "readonly",
     "Intl": "readonly",
-    "process": "readonly"
+    "process": "readonly",
+    "URL": "readonly"
   }
 }
