@@ -9,7 +9,7 @@ export default function Banner({ banner, ...props }) {
         <Box mb={14}>
           <Image
             layout="responsive"
-            src={`process.env.STRAPI_URL${url}`}
+            src={url}
             alt={banner.alternativeText}
             width={width}
             height={height}

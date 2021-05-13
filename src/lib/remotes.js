@@ -5,6 +5,7 @@ export const getRecentPosts = async () => {
     _sort: 'created_at:DESC',
     _limit: 3
   });
-  const res = await fetch(`process.env.STRAPI_URL/posts?${query}`);
+  const url = new URL(`/posts?${query}`, process.env.STRAPI_URL);
+  const res = await fetch(url.href);
   return res.json();
 };
