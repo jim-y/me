@@ -19,7 +19,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "framer-motion": "^4",
-    "markdown-link-extractor": "^1.2.7",
+    "markdown-link-extractor": "^3.0.2",
     "next": "10.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
